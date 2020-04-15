@@ -71,7 +71,7 @@ namespace UnitTests
             var expected = "Fizz";
 
             //act
-            var result = service.Fizz(3);
+            var result = service.FizzBuzz(3);
 
             //assert
             Assert.AreEqual(expected, result);
@@ -82,28 +82,15 @@ namespace UnitTests
         {
             //arrange
             var service = BuildService();
-            var expected = "2";
+            var expected = "4";
 
             //act
-            var result = service.Fizz(2);
+            var result = service.FizzBuzz(4);
 
             //assert
             Assert.AreEqual(expected, result);
         }
 
-        [Test]
-        public void OutputShouldBeBuzz()
-        {
-            //arrange
-            var service = BuildService();
-            var expected = "Buzz";
-
-            //act
-            var result = service.Buzz(5);
-
-            //assert
-            Assert.AreEqual(expected, result);
-        }
 
         [Test]
         public void OutputShouldBeFizzBuzz()

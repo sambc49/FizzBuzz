@@ -10,7 +10,8 @@ namespace FizzBuzz
             var fizzBuzzService = new FizzBuzzProvider();
             for (int i = 1; i < 101; i++)
             {
-                Console.WriteLine(fizzBuzzService.FizzBuzz(i));
+                var output = fizzBuzzService.FizzBuzz(i);
+                Console.WriteLine(output);
             }
         }
     }
