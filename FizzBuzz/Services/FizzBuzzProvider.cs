@@ -17,5 +17,28 @@ namespace FizzBuzz.Services
         {
             return IsFizz(number) ? "Fizz" : number.ToString();
         }
+
+        public string Buzz(int number)
+        {
+            return IsBuzz(number) ? "Buzz" : number.ToString();
+        }
+
+        public string FizzBuzz(int number)
+        {
+            var stringToReturn = string.Empty;
+            if (IsFizz(number))
+            {
+                stringToReturn = "Fizz";
+            }
+            if (IsBuzz(number))
+            {
+                stringToReturn += "Buzz";
+            }
+            else
+            {
+                stringToReturn = number.ToString();
+            }
+            return stringToReturn;
+        }
     }
 }

@@ -64,7 +64,7 @@ namespace UnitTests
         }
 
         [Test]
-        public void StringShouldBeFizz()
+        public void OutputShouldBeFizz()
         {
             //arrange
             var service = BuildService();
@@ -72,6 +72,48 @@ namespace UnitTests
 
             //act
             var result = service.Fizz(3);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void OutputShouldBeNumber()
+        {
+            //arrange
+            var service = BuildService();
+            var expected = "2";
+
+            //act
+            var result = service.Fizz(2);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void OutputShouldBeBuzz()
+        {
+            //arrange
+            var service = BuildService();
+            var expected = "Buzz";
+
+            //act
+            var result = service.Buzz(5);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void OutputShouldBeFizzBuzz()
+        {
+            //arrange
+            var service = BuildService();
+            var expected = "FizzBuzz";
+
+            //act
+            var result = service.FizzBuzz(15);
 
             //assert
             Assert.AreEqual(expected, result);
