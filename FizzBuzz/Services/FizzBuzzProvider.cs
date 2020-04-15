@@ -15,15 +15,18 @@ namespace FizzBuzz.Services
 
         public string FizzBuzz(int number)
         {
-            if(IsFizz(number) && IsBuzz(number))
+            var isFizz = IsFizz(number);
+            var isBuzz = IsBuzz(number);
+
+            if(isFizz && isBuzz)
             {
                 return "FizzBuzz";
             }
-            if (IsFizz(number))
+            if (isFizz)
             {
                 return "Fizz";
             }
-            if (IsBuzz(number))
+            if (isBuzz)
             {
                 return "Buzz";
             }
