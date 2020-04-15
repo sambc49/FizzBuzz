@@ -5,8 +5,6 @@ namespace UnitTests
 {
     public class Tests
     {
-        private int _maxCount = 100;
-
         [Test]
         public void IsFizzShouldBeTrue()
         {
@@ -90,7 +88,6 @@ namespace UnitTests
             //assert
             Assert.AreEqual(expected, result);
         }
-
 
         [Test]
         public void OutputShouldBeFizzBuzz()
