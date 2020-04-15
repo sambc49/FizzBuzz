@@ -24,3 +24,6 @@ Fizz
 19
 Buzz
 ... etc up to 100
+
+Approach has been taken to use a provider, seperate methods and keep things simple. 
+IsFizz / IsBuzz method logic can be easily changed in this scenario remaining testable. 
