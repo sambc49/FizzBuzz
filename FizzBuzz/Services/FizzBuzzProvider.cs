@@ -25,20 +25,19 @@ namespace FizzBuzz.Services
 
         public string FizzBuzz(int number)
         {
-            var stringToReturn = string.Empty;
+            if(IsFizz(number) && IsBuzz(number))
+            {
+                return "FizzBuzz";
+            }
             if (IsFizz(number))
             {
-                stringToReturn = "Fizz";
+                return "Fizz";
             }
             if (IsBuzz(number))
             {
-                stringToReturn += "Buzz";
+                return "Buzz";
             }
-            else
-            {
-                stringToReturn = number.ToString();
-            }
-            return stringToReturn;
+            return number.ToString();
         }
     }
 }
