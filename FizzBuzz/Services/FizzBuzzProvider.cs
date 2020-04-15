@@ -12,5 +12,10 @@ namespace FizzBuzz.Services
         {
             return number % 5 == 0;
         }
+
+        public string Fizz(int number)
+        {
+            return IsFizz(number) ? "Fizz" : number.ToString();
+        }
     }
 }

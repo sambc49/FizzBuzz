@@ -63,6 +63,20 @@ namespace UnitTests
             Assert.AreEqual(expected, result);
         }
 
+        [Test]
+        public void StringShouldBeFizz()
+        {
+            //arrange
+            var service = BuildService();
+            var expected = "Fizz";
+
+            //act
+            var result = service.Fizz(3);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
         private FizzBuzzProvider BuildService()
         {
             return new FizzBuzzProvider();
