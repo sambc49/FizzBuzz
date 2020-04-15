@@ -76,6 +76,19 @@ namespace UnitTests
         }
 
         [Test]
+        public void OutputShouldBeBuzz()
+        {
+            //arrange
+            var service = BuildService();
+            var expected = "Buzz";
+
+            //act
+            var result = service.FizzBuzz(5);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+        [Test]
         public void OutputShouldBeNumber()
         {
             //arrange
