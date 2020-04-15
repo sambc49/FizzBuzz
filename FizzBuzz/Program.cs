@@ -1,5 +1,5 @@
 ﻿using System;
-using FizzBuzz.Services;
+using FizzBuzz.Providers;
 
 namespace FizzBuzz
 {

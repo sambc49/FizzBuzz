@@ -1,4 +1,4 @@
-using FizzBuzz.Services;
+using FizzBuzz.Providers;
 using NUnit.Framework;
 
 namespace UnitTests
