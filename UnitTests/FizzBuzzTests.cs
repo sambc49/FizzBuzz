@@ -6,10 +6,6 @@ namespace UnitTests
     public class Tests
     {
         private int _maxCount = 100;
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
         public void IsFizzShouldBeTrue()
@@ -20,6 +16,48 @@ namespace UnitTests
 
             //act
             var result = service.IsFizz(3);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void IsFizzShouldNotBeTrue()
+        {
+            //arrange
+            var service = BuildService();
+            bool expected = false;
+
+            //act
+            var result = service.IsFizz(1);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void IsBuzzShouldBeTrue()
+        {
+            //arrange
+            var service = BuildService();
+            bool expected = true;
+
+            //act
+            var result = service.IsBuzz(5);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        public void IsBuzzShouldBeFalse()
+        {
+            //arrange
+            var service = BuildService();
+            bool expected = false;
+
+            //act
+            var result = service.IsBuzz(1);
 
             //assert
             Assert.AreEqual(expected, result);
