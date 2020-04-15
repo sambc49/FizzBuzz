@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace UnitTests
 {
-    public class Tests
+    public class FizzBuzzTests
     {
         [Test]
         public void IsFizzShouldBeTrue()
